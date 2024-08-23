@@ -11,3 +11,6 @@
 .intel-font{
     font-family: "Inter", sans-serif;
 }
+.border-down{
+    border-bottom: 2px solid #1DD100;
+}
