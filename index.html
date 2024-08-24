@@ -20,7 +20,7 @@
                     colors: {
                         'primary-color': '#1DD100',
                         'second-color': '#FFBF0F',
-                        'sub-color': '#F78 C9C',
+                        'sub-color': '#F78C9C',
                     }
                 }
             }
@@ -29,7 +29,7 @@
 
 </head>
 
-<body class="py-2 px-16 raleway-font">
+<body class="py-2 px-4 sm:px-8 lg:px-16 raleway-font">
     <header>
         <!-- Menu bar items  -->
         <section>
@@ -52,10 +52,10 @@
                                 <li><a>Search</a></li>
                             </ul>
                         </div>
-                        <a class="text-[36px] font-extrabold">MJ Ticket</a>
+                        <a class="text-[28px] sm:text-[36px] font-extrabold">MJ Ticket</a>
                     </div>
                     <div class="navbar-center hidden lg:flex">
-                        <ul class="menu menu-horizontal px-1 gap-6 text-[16px] font-medium">
+                        <ul class="menu menu-horizontal px-1 gap-6 text-[14px] sm:text-[16px] font-medium">
                             <li><a>Home</a></li>
                             <li><a>About</a></li>
                             <li><a>Designation</a></li>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="navbar-end">
                         <a class="btn bg-[#E8FAE5] text-[#1DD100] font-bold border-[#97EA89]">Bus
-                            <img src="images/bus-icon.png" alt="">
+                            <img src="images/bus-icon.png" alt="" class="sm:inline">
                         </a>
                     </div>
                 </div>
@@ -73,44 +73,48 @@
         <!-- Banner section start  -->
         <section>
             <div
-                class="bg-[url('images/banner.png')] bg-cover bg-center h-[90vh] flex items-center justify-center text-white rounded-2xl mt-9">
-                <div class="text-center space-y-3">
-                    <h1 class="text-7xl font-extrabold mb-2">End-to-End Travel with <br> <span
-                            class="text-primary-color">MJ Paribahan</span></h1>
-                    <p class="text-lg">Yes, you can run unit tests and view the results directly within the app. <br>
-                        The integrated testing features allow for a streamlined .</p>
-                    <button class="btn bg-primary-color font-bold border-none">Buy Tickets</button>
+                class="bg-[url('images/banner.png')] bg-cover bg-center h-[70vh] sm:h-[80vh] lg:h-[90vh] flex items-center justify-center text-white rounded-xl mt-6 lg:mt-9">
+                <div class="text-center space-y-3 px-4 sm:px-0">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-2">End-to-End Travel with
+                        <br> <span class="text-primary-color">MJ Paribahan</span></h1>
+                    <p class="text-sm sm:text-lg">Yes, you can run unit tests and view the results directly within the
+                        app. <br>
+                        The integrated testing features allow for a streamlined experience.</p>
+                    <button class="btn bg-primary-color font-bold border-none mt-4 sm:mt-6">Buy Tickets</button>
                 </div>
             </div>
-            <div class="flex justify-center gap-9 -mt-14">
+            <div class="flex flex-col sm:flex-row justify-center gap-6 lg:gap-9 -mt-10 lg:-mt-14 px-4 sm:px-0">
                 <!-- banner cart -1  -->
-                <div class="intel-font border-down flex items-center gap-4 shadow-lg px-10 py-5 bg-white rounded-xl">
+                <div
+                    class="intel-font border-down flex items-center gap-4 shadow-lg px-6 sm:px-10 py-5 bg-white rounded-xl">
                     <div>
-                        <img src="images/people.png" alt="">
+                        <img src="images/people.png" alt="" class="w-12 sm:w-auto">
                     </div>
                     <div>
-                        <h2 class="text-[36px] font-bold">500K+</h2>
-                        <p class="text-[18px] text-gray-400">Registered users</p>
+                        <h2 class="text-[28px] sm:text-[36px] font-bold">500K+</h2>
+                        <p class="text-[16px] sm:text-[18px] text-gray-400">Registered users</p>
                     </div>
                 </div>
                 <!-- banner cart -2  -->
-                <div class="intel-font border-down flex items-center gap-4 shadow-lg px-10 py-5 bg-white rounded-xl">
+                <div
+                    class="intel-font border-down flex items-center gap-4 shadow-lg px-6 sm:px-10 py-5 bg-white rounded-xl">
                     <div>
-                        <img src="images/ticket-cupon.png" alt="">
+                        <img src="images/ticket-cupon.png" alt="" class="w-12 sm:w-auto">
                     </div>
                     <div>
-                        <h2 class="text-[36px] font-bold">1.7 lacks</h2>
-                        <p class="text-[18px] text-gray-400">Tickets sold</p>
+                        <h2 class="text-[28px] sm:text-[36px] font-bold">1.7 lacks</h2>
+                        <p class="text-[16px] sm:text-[18px] text-gray-400">Tickets sold</p>
                     </div>
                 </div>
                 <!-- banner cart -3  -->
-                <div class="intel-font border-down flex items-center gap-4 shadow-lg px-10 py-5 bg-white rounded-xl">
+                <div
+                    class="intel-font border-down flex items-center gap-4 shadow-lg px-6 sm:px-10 py-5 bg-white rounded-xl">
                     <div>
-                        <img src="images/stoppage.png" alt="">
+                        <img src="images/stoppage.png" alt="" class="w-12 sm:w-auto">
                     </div>
                     <div>
-                        <h2 class="text-[36px] font-bold">80K+</h2>
-                        <p class="text-[18px] text-gray-400">Rental partners</p>
+                        <h2 class="text-[28px] sm:text-[36px] font-bold">80K+</h2>
+                        <p class="text-[16px] sm:text-[18px] text-gray-400">Rental partners</p>
                     </div>
                 </div>
             </div>
@@ -119,69 +123,75 @@
     <main>
 
         <div>
-            <h2 class="text-2xl font-bold text-[30px] text-black text-center mt-16 mb-8">Best offers for you</h2>
+            <h2
+                class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[30px] text-black text-center mt-10 sm:mt-16 mb-6 sm:mb-8">
+                Best offers for you</h2>
         </div>
 
         <section>
             <!-- Best offers Section -->
-            <div class="flex justify-center gap-10">
-                <div class="w-full flex bg-[#FFBF0F] p-6 rounded-2xl items-center h-40">
-                    <div class="w-[65%] text-center text-black">
-                        <h2 class="intel-font text-[40px] font-bold">15% OFF</h2>
-                        <p><b>on your next purchase</b></p>
-                        <p class="text-[#816310]">use by January 2024</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6 sm:gap-10">
+                <div class="w-full flex bg-[#FFBF0F] p-4 sm:p-6 rounded-2xl items-center h-36 sm:h-40">
+                    <div class="w-[60%] sm:w-[65%] text-center text-black">
+                        <h2 class="intel-font text-[32px] sm:text-[40px] font-bold">15% OFF</h2>
+                        <p class="text-sm sm:text-base"><b>on your next purchase</b></p>
+                        <p class="text-xs sm:text-sm text-[#816310]">use by January 2024</p>
                     </div>
                     <div>
                         <img src="images/cupon-devider.png" alt="" class="h-40">
                     </div>
-                    <div class="w-[35%] text-center">
-                        <h2 class="raleway-font text-[24px] font-bold text-black">NEW15</h2>
-                        <p class="text-[#816310]">Coupon Code</p>
+                    <div class="w-[40%] sm:w-[35%] text-center">
+                        <h2 class="raleway-font text-[20px] sm:text-[24px] font-bold text-black">NEW15</h2>
+                        <p class="text-xs sm:text-sm text-[#816310]">Coupon Code</p>
                     </div>
                 </div>
-                <div class="w-full flex bg-[#F78C9C] p-6 rounded-2xl items-center justify-center h-40">
-                    <div class="w-[65%] text-center text-black">
-                        <h2 class="intel-font text-[40px] font-bold">20% OFF</h2>
-                        <p><b>on your next purchase</b></p>
-                        <p class="text-[#816310]">use by January 2024</p>
+                <div class="w-full flex bg-[#F78C9C] p-4 sm:p-6 rounded-2xl items-center h-36 sm:h-40">
+                    <div class="w-[60%] sm:w-[65%] text-center text-black">
+                        <h2 class="intel-font text-[32px] sm:text-[40px] font-bold">20% OFF</h2>
+                        <p class="text-sm sm:text-base"><b>on your next purchase</b></p>
+                        <p class="text-xs sm:text-sm text-[#816310]">use by January 2024</p>
                     </div>
                     <div>
                         <img src="images/cupon-devider.png" alt="" class="h-40">
                     </div>
-                    <div class="w-[35%] text-center">
-                        <h2 class="raleway-font to-black text-[22px] font-bold">Couple 20</h2>
-                        <p class="text-[#816310]">Coupon Code</p>
+                    <div class="w-[40%] sm:w-[35%] text-center">
+                        <h2 class="raleway-font text-[20px] sm:text-[22px] font-bold">Couple 20</h2>
+                        <p class="text-xs sm:text-sm text-[#816310]">Coupon Code</p>
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center mt-10">
+            <div class="flex justify-center mt-6 sm:mt-10">
                 <button class="btn btn-outline border-[#97EA89] text-primary-color font-bold">See All Offers</button>
             </div>
         </section>
 
-        <section class="mj-poribahan-container bg-[#F7F8F8] mt-16 py-12">
+        <section class="mj-poribahan-container bg-[#F7F8F8] mt-10 sm:mt-16 py-8 sm:py-12">
             <!-- M.J Poribahan Seat & Bill Details  -->
             <div class="text-center">
-                <h2 class="text-2xl font-bold text-[30px] text-black text-center mt-16 mb-8">M.J Paribahan</h2>
-                <p class="text-lg">Yes, you can run unit tests and view the results directly within the
-                    app. <br>
-                    The integrated testing features allow for a streamlined .</p>
+                <h2
+                    class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[30px] text-black text-center mt-10 sm:mt-16 mb-6 sm:mb-8">
+                    M.J Paribahan</h2>
+                <p class="text-sm sm:text-lg">Yes, you can run unit tests and view the results directly within the app.
+                    <br class="hidden sm:inline">
+                    The integrated testing features allow for a streamlined experience.</p>
             </div>
             <!-- Coach Details -->
-            <div class="flex bg-white m-12 rounded-xl w-[90%]">
-                <div class=" w-[70%]">
-                    <div class="flex items-center justify-between p-3">
+            <div class="flex flex-col lg:flex-row bg-white m-6 sm:m-12 rounded-xl w-[95%] lg:w-[90%]">
+                <div class="w-full lg:w-[70%]">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 gap-4 sm:gap-0">
                         <div class="flex gap-4">
-                            <img src="images/bus-logo.png" alt="">
+                            <img src="images/bus-logo.png" alt="" class="w-14 sm:w-auto">
                             <div>
-                                <h2 class="text-2xl font-bold text-[30px] text-black intel-font">Greenline Paribahan
-                                </h2>
-                                <p class="text-[#816310]">Coach-009-WEB ! Non AC_Business</p>
+                                <h2
+                                    class="text-[22px] sm:text-2xl font-bold text-[24px] sm:text-[30px] text-black intel-font">
+                                    Greenline Paribahan</h2>
+                                <p class="text-[#816310]">Coach-009-WEB | Non AC_Business</p>
                             </div>
                         </div>
                         <div>
                             <button class="btn bg-[#E8FAE5] text-[#1DD100] font-bold border-[#97EA89] intel-font">
-                                <img src="images/seat-green.png" alt="">
+                                <img src="images/seat-green.png" alt="" class="w-5 sm:w-auto">
                                 <span id="seat-left">40</span> Seats Left
                             </button>
                         </div>
@@ -192,29 +202,27 @@
                             <p class="font-bold">Sylhet - Dhaka</p>
                         </div>
                         <div class="h-[1px] border-dotted border-b"></div>
-                        <div class="mt-12 flex items-center justify-between p-4">
+                        <div class="mt-8 sm:mt-12 flex items-center justify-between p-4">
                             <p>Departure Time</p>
                             <p class="intel-font font-bold">9.00 PM</p>
                         </div>
-                        <div class="h-[1px] border-dotted border-b mb-6"></div>
-                        <div class="flex items-center justify-center gap-7 mb-6">
+                        <div class="h-[1px] border-dotted border-b mb-4 sm:mb-6"></div>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-7 mb-4 sm:mb-6">
                             <button class="btn btn-outline border-[#97EA89] text-primary-color font-bold">Boarding Point
-                                -
-                                Laxmipur</button>
+                                - Laxmipur</button>
                             <button class="btn btn-outline border-[#97EA89] text-primary-color font-bold">Dropping Point
-                                -
-                                Bogura</button>
+                                - Bogura</button>
                             <button class="btn btn-outline border-[#97EA89] text-primary-color font-bold">Est. Time - 11
                                 Hour</button>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="hidden lg:block">
                     <img src="images/info-devider.png" alt="" class="ml-10 h-full">
                 </div>
-                <div class="mt-32 ml-20 w-[20%]">
+                <div class="flex flex-col items-center justify-center mt-6 lg:mt-32 ml-0 lg:ml-20 w-full lg:w-[20%]">
                     <img src="images/fare.png" alt="" class="mb-3">
-                    <h2 class="text-2xl font-bold text-[30px] text-black intel-font">550 Taka</h2>
+                    <h2 class="text-[26px] sm:text-[30px] font-bold text-black intel-font">550 Taka</h2>
                     <p class="text-[#816310]">Per Seat</p>
                 </div>
             </div>
@@ -223,9 +231,6 @@
     <footer>
 
     </footer>
-
-
-
 
     <script src="script/app.js"></script>
 </body>
