@@ -232,8 +232,8 @@
 
         <!-- Bus seat plan and total amount Section  -->
         <section class="bg-[#F7F8F8] rounded-xl -mt-32">
-            <div class="flex flex-col lg:flex-row m-6 bg-white sm:m-12 rounded-xl w-[95%] lg:w-[90%]">
-                <div class="w-[55%] p-4">
+            <div class="flex flex-col lg:flex-row gap-16 m-6 bg-white sm:m-12 rounded-xl w-[95%] lg:w-[90%]">
+                <div class="w-[55%] p-8">
                     <div>
                         <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[22px] text-black">
                             Select Your Seat</h2>
@@ -354,7 +354,86 @@
                     </div>
                 </div>
 
-                <div class="w-[35%]"></div>
+                <div class="w-[40%] p-8 intel-font">
+                    <div>
+                        <div>
+                            <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[22px] text-black">
+                                Your Selected Seat Details</h2>
+                        </div>
+                        <div class="h-[1px] border-dashed border-b mt-2"> </div>
+
+                        <div class="bg-[#F7F8F8] mt-4 p-7 rounded-xl">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[16px] text-black">
+                                    Seat <span id="selected-seat"
+                                        class="bg-[#1DD100] p-2 text-white rounded-xl">0</span></h4>
+                                <h4 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[16px] text-black">
+                                    Class</h4>
+                                <h4 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[16px] text-black">
+                                    Price</h4>
+                            </div>
+                            <div class="h-[1px] border-dashed border-b mt-3"> </div>
+
+                            <!-- It will be attached by the js  -->
+                            <div class="selected-ticket-details">
+
+                            </div>
+                            <div class="h-[1px] border-solid border-b mt-3"> </div>
+                            <div class="flex items-center justify-between">
+                                <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[18px] text-black">
+                                    Total Price</h2>
+                                <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[18px] text-black">
+                                    BDT <span>0</span></h2>
+                            </div>
+                            <!-- Discounted Price here -->
+                            <div class="flex items-center justify-between mt-5">
+                                <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[15px] text-black">
+                                    Discounted Price</h2>
+                                <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[15px] text-black">
+                                    BDT <span class="discounted-price">0</span></h2>
+                            </div>
+                            <div class="flex mt-2">
+                                <input class="rounded w-full" type="text" placeholder="     Have any coupon ?">
+                                <button class="btn bg-[#1DD100] text-white font-bold">
+                                    Apply
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 mb-3">
+                                <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[18px] text-black">Grand
+                                    Total</h2>
+                                <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[18px] text-black">
+                                    BDT <span>0</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mt-12">
+                            <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[17px] text-black">Passenger
+                                Name*</h2>
+                            <input class="border-2 w-full p-3 rounded-md" type="text" placeholder="  Enter Your Name"
+                                required>
+                        </div>
+                        <div class="mt-4">
+                            <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[17px] text-black">Phone
+                                Number*</h2>
+                            <input class="border-2 w-full p-3 rounded-md" type="number"
+                                placeholder="  Enter Your Phone Number" required>
+                        </div>
+                        <div class="mt-4">
+                            <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[17px] text-black">Email ID
+                            </h2>
+                            <input class="border-2 w-full p-3 rounded-md" type="email"
+                                placeholder="  Enter Your Email ID">
+                        </div>
+                        <div>
+                            <button class="btn bg-[#1DD100] text-white font-bold w-full mt-3">Next</button>
+                        </div>
+                        <div class="flex justify-between mt-3">
+                            <a href="#" class="underline">Terms and Conditions</a>
+                            <a href="#" class="underline">Cancellation Policy</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
