@@ -76,7 +76,8 @@
                 class="bg-[url('images/banner.png')] bg-cover bg-center h-[70vh] sm:h-[80vh] lg:h-[90vh] flex items-center justify-center text-white rounded-xl mt-6 lg:mt-9">
                 <div class="text-center space-y-3 px-4 sm:px-0">
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-2">End-to-End Travel with
-                        <br> <span class="text-primary-color">MJ Paribahan</span></h1>
+                        <br> <span class="text-primary-color">MJ Paribahan</span>
+                    </h1>
                     <p class="text-sm sm:text-lg">Yes, you can run unit tests and view the results directly within the
                         app. <br>
                         The integrated testing features allow for a streamlined experience.</p>
@@ -169,11 +170,13 @@
             <!-- M.J Poribahan Seat & Bill Details  -->
             <div class="text-center">
                 <h2
-                    class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[30px] text-black text-center mt-10 sm:mt-16 mb-6 sm:mb-8">
+                    class="text-xl sm:text-2xl font-bold sm:text-[36px] text-black text-center mt-10 sm:mt-16 mb-6 sm:mb-8">
                     M.J Paribahan</h2>
-                <p class="text-sm sm:text-lg">Yes, you can run unit tests and view the results directly within the app.
-                    <br class="hidden sm:inline">
-                    The integrated testing features allow for a streamlined experience.</p>
+                <p class="text-sm sm:text-lg p-2">Yes, you can run unit tests & view the results directly within the
+                    app.
+                    <br>
+                    The integrated testing features allow for a streamlined experience.
+                </p>
             </div>
             <!-- Coach Details -->
             <div class="flex flex-col lg:flex-row bg-white m-6 sm:m-12 rounded-xl w-[95%] lg:w-[90%]">
@@ -183,9 +186,8 @@
                         <div class="flex gap-4">
                             <img src="images/bus-logo.png" alt="" class="w-14 sm:w-auto">
                             <div>
-                                <h2
-                                    class="text-[22px] sm:text-2xl font-bold text-[24px] sm:text-[30px] text-black intel-font">
-                                    Greenline Paribahan</h2>
+                                <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[30px] text-black">
+                                    Greenline Poribahan</h2>
                                 <p class="text-[#816310]">Coach-009-WEB | Non AC_Business</p>
                             </div>
                         </div>
@@ -201,12 +203,12 @@
                             <p>Route</p>
                             <p class="font-bold">Sylhet - Dhaka</p>
                         </div>
-                        <div class="h-[1px] border-dotted border-b"></div>
+                        <div class="h-[1px] border-dashed border-b"></div>
                         <div class="mt-8 sm:mt-12 flex items-center justify-between p-4">
                             <p>Departure Time</p>
                             <p class="intel-font font-bold">9.00 PM</p>
                         </div>
-                        <div class="h-[1px] border-dotted border-b mb-4 sm:mb-6"></div>
+                        <div class="h-[1px] border-dashed border-b mb-4 sm:mb-6"></div>
                         <div class="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-7 mb-4 sm:mb-6">
                             <button class="btn btn-outline border-[#97EA89] text-primary-color font-bold">Boarding Point
                                 - Laxmipur</button>
@@ -220,11 +222,139 @@
                 <div class="hidden lg:block">
                     <img src="images/info-devider.png" alt="" class="ml-10 h-full">
                 </div>
-                <div class="flex flex-col items-center justify-center mt-6 lg:mt-32 ml-0 lg:ml-20 w-full lg:w-[20%]">
+                <div class="flex flex-col items-center justify-center mt-2 lg:mt-12 ml-0 lg:ml-8 w-full lg:w-[20%]">
                     <img src="images/fare.png" alt="" class="mb-3">
                     <h2 class="text-[26px] sm:text-[30px] font-bold text-black intel-font">550 Taka</h2>
                     <p class="text-[#816310]">Per Seat</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- Bus seat plan and total amount Section  -->
+        <section class="bg-[#F7F8F8] rounded-xl -mt-32">
+            <div class="flex flex-col lg:flex-row m-6 bg-white sm:m-12 rounded-xl w-[95%] lg:w-[90%]">
+                <div class="w-[55%] p-4">
+                    <div>
+                        <h2 class="text-xl sm:text-2xl font-bold text-[24px] sm:text-[22px] text-black">
+                            Select Your Seat</h2>
+                    </div>
+                    <div class="h-[1px] border-dashed border-b mt-2"> </div>
+                    <div class="flex items-center justify-between mt-3">
+                        <div class="flex gap-3">
+                            <img src="images/seat-gray.png" alt="">
+                            <strong>Available</strong>
+                        </div>
+                        <div class="flex gap-3">
+                            <img src="images/seat-green-filled.png" alt="">
+                            <strong>Selected</strong>
+                        </div>
+                    </div>
+                    <div class="h-[1px] border-dashed border-b mt-2"> </div>
+
+                    <!-- Driver and Passengers SeatPlan  -->
+                    <div class="flex justify-end mt-10 mb-7">
+                        <button class="btn px-[29px]"><img src="images/wheel.png" alt=""></button>
+                    </div>
+                    <!-- Passengers seat -->
+                    <div class="mt-3 flex gap-32">
+                        <div class="space-y-4 intel-font">
+                            <div class="flex items-center gap-6">
+                                <strong>A</strong>
+                                <button class="btn px-[35px]"><span>A1</span></button>
+                                <button class="btn px-[35px]"><span>A2</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <strong>B</strong>
+                                <button class="btn px-9"><span>B1</span></button>
+                                <button class="btn px-9"><span>B2</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <strong>C</strong>
+                                <button class="btn px-[35px]"><span>C1</span></button>
+                                <button class="btn px-[35px]"><span>C2</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <strong>D</strong>
+                                <button class="btn px-9"><span>D1</span></button>
+                                <button class="btn px-9"><span>D2</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <strong>E</strong>
+                                <button class="btn px-[37px]"><span>E1</span></button>
+                                <button class="btn px-[37px]"><span>E2</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <strong>F</strong>
+                                <button class="btn px-[37px]"><span>F1</span></button>
+                                <button class="btn px-[37px]"><span>F2</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <strong>G</strong>
+                                <button class="btn px-[35px]"><span>G1</span></button>
+                                <button class="btn px-[35px]"><span>G2</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <strong>H</strong>
+                                <button class="btn px-[35px]"><span>H1</span></button>
+                                <button class="btn px-[35px]"><span>H2</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <strong>I</strong>
+                                <button class="btn px-[40px]"><span>I1</span></button>
+                                <button class="btn px-[40px]"><span>I2</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <strong>J</strong>
+                                <button class="btn px-[37px]"><span>J1</span></button>
+                                <button class="btn px-[37px]"><span>J2</span></button>
+                            </div>
+                        </div>
+                        <div class="intel-font space-y-4">
+                            <div class="flex items-center gap-6">
+                                <button class="btn px-[35px]"><span>A3</span></button>
+                                <button class="btn px-[35px]"><span>A4</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <button class="btn px-9"><span>B3</span></button>
+                                <button class="btn px-9"><span>B4</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <button class="btn px-[35px]"><span>C3</span></button>
+                                <button class="btn px-[35px]"><span>C4</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <button class="btn px-9"><span>D3</span></button>
+                                <button class="btn px-9"><span>D4</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <button class="btn px-[37px]"><span>E3</span></button>
+                                <button class="btn px-[37px]"><span>E4</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <button class="btn px-[37px]"><span>F3</span></button>
+                                <button class="btn px-[37px]"><span>F4</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <button class="btn px-[35px]"><span>G3</span></button>
+                                <button class="btn px-[35px]"><span>G4</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <button class="btn px-[35px]"><span>H3</span></button>
+                                <button class="btn px-[35px]"><span>H4</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <button class="btn px-[39px]"><span>I3</span></button>
+                                <button class="btn px-[39px]"><span>I4</span></button>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <button class="btn px-[36px]"><span>J3</span></button>
+                                <button class="btn px-[36px]"><span>J4</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-[35%]"></div>
             </div>
         </section>
     </main>
