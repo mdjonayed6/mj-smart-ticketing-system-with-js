@@ -460,7 +460,24 @@
                             placeholder="  Enter Your Email ID">
                     </div>
                     <div>
-                        <button class="btn bg-[#1DD100] text-white font-bold w-full mt-4">Next</button>
+                        <label id="next-btn" for="my_modal_6"
+                            class="btn bg-[#1DD100] text-white font-bold w-full mt-6">Next</label>
+                        <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+                        <div class="modal" role="dialog">
+                            <div class="modal-box text-center text-black">
+                                <div class="flex justify-center">
+                                    <img src="images/success.png" alt="">
+                                </div>
+                                <h3 class="text-lg font-bold text-green-600">Success</h3>
+                                <p class="py-3"><strong>Thank you! for Booking Our Bus Seats.<br>We are working hard to
+                                        find the best service & deals for you. </strong> <br>
+                                    Shortly you will find a confirmation in your email.</p>
+                                <div class="modal-action flex justify-center">
+                                    <label for="my_modal_6"
+                                        class="btn bg-green-600 text-white w-[40%]">Continue!</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="flex justify-between mt-3">
                         <a href="#" class="underline text-sm">Terms and Conditions</a>
@@ -468,15 +485,17 @@
                     </div>
                 </div>
             </div>
+            </div>
         </section>
 
     </main>
-    <footer class="bg-[#030712] intel-font">
+    <footer class="bg-[#030712] intel-font rounded">
         <div class="py-12 px-4 sm:px-8 lg:px-16">
             <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
                 <div class="mb-6 md:mb-0">
                     <h2 class="text-lg sm:text-lg font-bold text-white">MJ Ticket</h2>
-                    <p class="text-gray-300">P-Ticket is a digital platform to make your <br class="sm:block"> daily commuting better.</p>
+                    <p class="text-gray-300">P-Ticket is a digital platform to make your <br class="sm:block"> daily
+                        commuting better.</p>
                 </div>
                 <div class="text-center md:text-left">
                     <p class="text-gray-200 mb-2">Download our app</p>
@@ -489,7 +508,7 @@
                     </button>
                 </div>
             </div>
-    
+
             <!-- Divider Line -->
             <div class="h-[1px] border-dashed border-b border-gray-500 mt-10"></div>
             <div class="flex flex-col sm:flex-row justify-between mt-8 text-gray-200 space-y-4 sm:space-y-0">
@@ -497,24 +516,25 @@
                     <p>&copy; 2024 All rights reserved, MJ-Ticket Services Limited.</p>
                 </div>
                 <div class="flex space-x-4">
-                    <a href="#" class="hover:underline">Terms & Conditions</a>
-                    <a href="#" class="hover:underline">Return & Refund Policy</a>
+                    <a href="#" class="hover:underline">Terms & Conditions <span class="font-bold">.</span></a>
+                    <a href="#" class="hover:underline">Return & Refund Policy <span class="font-bold">.</span></a>
                     <a href="#" class="hover:underline">Privacy Policy</a>
                 </div>
             </div>
-    
+
             <!-- Divider Line -->
             <div class="h-[1px] border-dashed border-b border-gray-500 mt-10"></div>
             <p class="text-gray-400 text-center mt-12">Designed & Developed by | MD. JONAYED</p>
-            <div class="flex items-center justify-center space-x-3 text-gray-100 mt-4">
-                <p>To Connect, Please Visit <a href="https://www.linkedin.com/in/md-jonayed/" target="_blank" class="text-orange-700 hover:underline">LinkedIn Profile</a></p>
+            <div class="flex items-center justify-center space-x-3 text-gray-100 mt-1">
+                <p>To Connect, Please Visit <a href="https://www.linkedin.com/in/md-jonayed/" target="_blank"
+                        class="text-orange-700 hover:underline">LinkedIn Profile</a></p>
                 <a href="https://www.linkedin.com/in/md-jonayed/" target="_blank">
                     <img src="images/Linkedin.png" alt="LinkedIn Logo" class="w-8 h-8">
                 </a>
             </div>
         </div>
     </footer>
-    
+
 
     <script src="script/app.js"></script>
 </body>
