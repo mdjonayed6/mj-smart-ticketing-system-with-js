@@ -9,7 +9,12 @@ for (const btn of allBtn) {
       "selected-ticket-details"
     );
     const div = document.createElement("div");
-    div.classList.add("flex", "font-semibold", "text-center", "justify-between");
+    div.classList.add(
+      "flex",
+      "font-semibold",
+      "text-center",
+      "justify-between"
+    );
     const p1 = document.createElement("p");
     const p2 = document.createElement("p");
     const p3 = document.createElement("p");
@@ -23,8 +28,19 @@ for (const btn of allBtn) {
     div.appendChild(p3);
 
     selectedContainer.appendChild(div);
+    updateTotalTicketPrice(result);
   });
 }
+
+//updated total price
+function updateTotalTicketPrice(value) {
+  const ticketPrice = getTargetedValue("total-price");
+  const sum = ticketPrice + parseInt(value);
+  document.getElementById("total-price").innerText = sum;
+}
+
+
+
 
 function getTargetedValue(id) {
   const target = document.getElementById(id).innerText;
