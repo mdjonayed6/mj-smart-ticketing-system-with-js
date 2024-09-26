@@ -157,8 +157,7 @@
                         <img src="images/cupon-devider.png" alt="" class="h-40">
                     </div>
                     <div class="w-[40%] sm:w-[35%] text-center">
-                        <h2 class="raleway-font text-[20px] sm:text-[22px] font-bold"><span id="discount20">Couple
-                                20</span></h2>
+                        <h2 class="raleway-font text-[20px] sm:text-[22px] font-bold">Couple20 </h2>
                         <p class="text-xs sm:text-sm text-[#816310]">Coupon Code</p>
                     </div>
                 </div>
@@ -173,7 +172,7 @@
             <div class="text-center">
                 <h2
                     class="text-xl sm:text-2xl font-bold sm:text-[36px] text-black text-center mt-10 sm:mt-16 mb-6 sm:mb-8">
-                    M.J Paribahan</h2>
+                    MJ Paribahan</h2>
                 <p class="text-sm sm:text-lg p-2">Yes, you can run unit tests & view the results directly within the
                     app.
                     <br>
@@ -437,14 +436,17 @@
                                         class="discounted-price">0</span></h2>
                             </div>
                             <div class="flex mt-2">
-                                <input class="rounded w-full" type="text" placeholder="     Have any coupon ?">
-                                <button class="btn bg-[#1DD100] text-white font-bold">
+                                <input id="coupon-code" class="rounded w-full" type="text"
+                                    placeholder="     Have any coupon ?">
+                                <button onclick="updatedGrandTotalTicketPrice('apply-btn')"
+                                    class="btn bg-[#1DD100] text-white font-bold">
                                     Apply
                                 </button>
                             </div>
                             <div class="flex items-center justify-between mt-6 mb-3">
                                 <h2 class="text-lg sm:text-lg font-bold text-black">Grand Total</h2>
-                                <h2 class="text-lg sm:text-lg font-bold text-black">BDT <span>0</span></h2>
+                                <h2 class="text-lg sm:text-lg font-bold text-black">BDT <span id="grand-total">0</span>
+                                </h2>
                             </div>
                         </div>
                     </div>
