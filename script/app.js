@@ -29,6 +29,7 @@ for (const btn of allBtn) {
 
     selectedContainer.appendChild(div);
     updateTotalTicketPrice(result);
+    updatedSeatCount();
   });
 }
 
@@ -39,7 +40,12 @@ function updateTotalTicketPrice(value) {
   document.getElementById("total-price").innerText = sum;
 }
 
-
+// updated seat 
+function updatedSeatCount (value){
+  const seatCount = getTargetedValue("selected-seat");
+  const update = seatCount + 1;
+  document.getElementById("selected-seat").innerText = update;
+}
 
 
 function getTargetedValue(id) {
