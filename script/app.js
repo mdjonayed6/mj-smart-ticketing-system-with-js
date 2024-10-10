@@ -1,38 +1,62 @@
 let coachClass = "Economy";
+let prevSeatIds = [];
 const allBtn = document.getElementsByClassName("seat-btn");
 for (const btn of allBtn) {
   btn.addEventListener("click", function (event) {
-    const seatId = event.currentTarget.querySelector("span").innerText;
-    const result = getTargetedValue("seat-price");
+    event.target.style.backgroundColor = "#1dd100";
+    let seatId = event.currentTarget.innerText;
+    let result = 0;
 
-    const selectedContainer = document.getElementById(
-      "selected-ticket-details"
-    );
-    const div = document.createElement("div");
-    div.classList.add(
-      "flex",
-      "font-semibold",
-      "text-center",
-      "justify-between"
-    );
-    const p1 = document.createElement("p");
-    const p2 = document.createElement("p");
-    const p3 = document.createElement("p");
+    if (prevSeatIds.length > 0) {
+      prevSeatIds.forEach((si, idx) => {
+        if (!prevSeatIds.includes(seatId)) {
+          prevSeatIds.push(seatId);
+          result = AddToTicketDetailContainer(seatId);
+        } else {
+          //obstacle
+          prevSeatIds.splice(idx, 1);
 
-    p1.innerText = seatId;
-    p2.innerText = coachClass;
-    p3.innerText = result;
+          const selectedContainer = document.getElementById(
+            "selected-ticket-details"
+          );
 
-    div.appendChild(p1);
-    div.appendChild(p2);
-    div.appendChild(p3);
+          selectedContainer.children[idx].remove();
 
-    selectedContainer.appendChild(div);
+          event.target.style.backgroundColor = "#f2f2f2";
+        }
+      });
+    } else {
+      prevSeatIds.push(seatId);
+      result = AddToTicketDetailContainer(seatId);
+    }
+
     updateTotalTicketPrice(result);
     updatedGrandTotalTicketPrice();
     updatedSeatCount();
     updatedLeftSeatCount();
   });
+}
+
+function AddToTicketDetailContainer(seatId) {
+  const result = getTargetedValue("seat-price");
+
+  const selectedContainer = document.getElementById("selected-ticket-details");
+  const div = document.createElement("div");
+  div.classList.add("flex", "font-semibold", "text-center", "justify-between");
+  const p1 = document.createElement("p");
+  const p2 = document.createElement("p");
+  const p3 = document.createElement("p");
+
+  p1.innerText = seatId;
+  p2.innerText = coachClass;
+  p3.innerText = result;
+
+  div.appendChild(p1);
+  div.appendChild(p2);
+  div.appendChild(p3);
+
+  selectedContainer.appendChild(div);
+  return result;
 }
 
 // updated grand total amount
