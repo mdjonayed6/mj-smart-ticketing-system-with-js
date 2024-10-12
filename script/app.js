@@ -1,45 +1,39 @@
 let coachClass = "Economy";
 let prevSeatIds = [];
-const allBtn = document.getElementsByClassName("seat-btn");
+const allBtn = document.querySelectorAll(".seat-btn");
 for (const btn of allBtn) {
-  btn.addEventListener("click", function (event) {
-    event.target.style.backgroundColor = "#1dd100";
-    let seatId = event.currentTarget.innerText;
-    let result = 0;
-
-    if (prevSeatIds.length > 0) {
-      prevSeatIds.forEach((si, idx) => {
-        if (!prevSeatIds.includes(seatId)) {
-          prevSeatIds.push(seatId);
-          result = AddToTicketDetailContainer(seatId);
-        } else {
-          //obstacle
-          prevSeatIds.splice(idx, 1);
-
-          const selectedContainer = document.getElementById(
-            "selected-ticket-details"
-          );
-
-          selectedContainer.children[idx].remove();
-
-          event.target.style.backgroundColor = "#f2f2f2";
-        }
-      });
-    } else {
-      prevSeatIds.push(seatId);
-      result = AddToTicketDetailContainer(seatId);
-    }
-
-    updateTotalTicketPrice(result);
-    updatedGrandTotalTicketPrice();
-    updatedSeatCount();
-    updatedLeftSeatCount();
-  });
+  btn.addEventListener("click", seatSelection);
 }
 
-function AddToTicketDetailContainer(seatId) {
-  const result = getTargetedValue("seat-price");
+function seatSelection(event) {
+  event.target.style.backgroundColor = "#1dd100";
+  let seatId = event.currentTarget.innerText;
+  let seatPrice = getTargetedValue("seat-price");
 
+  if (prevSeatIds.includes(seatId)) {
+    const selectedContainer = document.getElementById(
+      "selected-ticket-details"
+    );
+
+    let idx = prevSeatIds.indexOf(seatId);
+    selectedContainer.children[idx].remove();
+    updateTotalTicketPrice(seatPrice, "sub");
+    updatedSeatCount("sub");
+    updatedLeftSeatCount("add");
+    event.target.style.backgroundColor = "#f2f2f2";
+    prevSeatIds.splice(idx, 1);
+  } else {
+    prevSeatIds.push(seatId);
+    AddToTicketDetailContainer(seatId, seatPrice);
+    updateTotalTicketPrice(seatPrice, "add");
+    updatedSeatCount("add");
+    updatedLeftSeatCount("sub");
+  }
+
+  updatedGrandTotalTicketPrice();
+}
+
+function AddToTicketDetailContainer(seatId, seatPrice) {
   const selectedContainer = document.getElementById("selected-ticket-details");
   const div = document.createElement("div");
   div.classList.add("flex", "font-semibold", "text-center", "justify-between");
@@ -49,14 +43,13 @@ function AddToTicketDetailContainer(seatId) {
 
   p1.innerText = seatId;
   p2.innerText = coachClass;
-  p3.innerText = result;
+  p3.innerText = seatPrice;
 
   div.appendChild(p1);
   div.appendChild(p2);
   div.appendChild(p3);
 
   selectedContainer.appendChild(div);
-  return result;
 }
 
 // updated grand total amount
@@ -82,23 +75,27 @@ function updatedGrandTotalTicketPrice(status) {
 }
 
 //updated total price
-function updateTotalTicketPrice(value) {
-  const ticketPrice = getTargetedValue("total-price");
-  const sum = ticketPrice + parseInt(value);
-  document.getElementById("total-price").innerText = sum;
+function updateTotalTicketPrice(value, status) {
+  const totalPrice = getTargetedValue("total-price");
+  const updatedTotalPrice =
+    status == "add"
+      ? totalPrice + parseInt(value)
+      : totalPrice - parseInt(value);
+  document.getElementById("total-price").innerText = updatedTotalPrice;
 }
 
 // updated seat
-function updatedSeatCount(value) {
+function updatedSeatCount(status) {
   const seatCount = getTargetedValue("selected-seat");
-  const update = seatCount + 1;
+  const update = status == "add" ? seatCount + 1 : seatCount - 1;
   document.getElementById("selected-seat").innerText = update;
 }
 
 // Left seat updated
-function updatedLeftSeatCount(value) {
+function updatedLeftSeatCount(status) {
   const leftSeatCount = getTargetedValue("seat-left");
-  const updateLeftSeat = leftSeatCount - 1;
+  const updateLeftSeat =
+    status == "sub" ? leftSeatCount - 1 : leftSeatCount + 1;
   document.getElementById("seat-left").innerText = updateLeftSeat;
 }
 
